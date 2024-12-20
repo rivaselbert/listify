@@ -1,7 +1,7 @@
 package com.example.listify.ui.navigation
 
 import androidx.navigation.NavHostController
-import com.example.listify.data.User
+import com.example.listify.data.model.User
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.net.URLEncoder

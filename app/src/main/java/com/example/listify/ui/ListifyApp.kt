@@ -5,7 +5,7 @@ import androidx.compose.runtime.remember
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.listify.data.User
+import com.example.listify.data.model.User
 import com.example.listify.ui.navigation.NavigationActions
 import com.example.listify.ui.navigation.Route
 import com.example.listify.ui.users.UserDetailsScreen

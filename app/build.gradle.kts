@@ -23,6 +23,7 @@ android {
     }
 
     buildTypes {
+        debug {  }
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -40,6 +41,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -56,13 +58,25 @@ dependencies {
 
     // Hilt
     implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
+    testImplementation(libs.junit.junit)
     kapt(libs.hilt.android.compiler)
 
     // Coil
     implementation(libs.coil.compose)
 
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+
     implementation(libs.kotlinx.serialization.json)
 
+    // Logger
+    implementation(libs.timber)
+
+    testImplementation(libs.mockito.kotlin)
+    //testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
