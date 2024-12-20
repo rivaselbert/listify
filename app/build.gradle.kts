@@ -70,6 +70,9 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.logging.interceptor)
 
+    //Paging
+    implementation(libs.androidx.paging.compose)
+
     implementation(libs.kotlinx.serialization.json)
 
     // Logger
