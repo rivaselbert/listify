@@ -7,7 +7,9 @@ Listify is an Android application that fetches random users data using the [http
 
 - Display List of Random Users
 - View User Details
-- Refetch Random Users 
+- Refetch Random Users
+- Paginate Users List
+- View Image in Expanded View
 
 # Architecture
 The project uses the MVVM (Model-View-ViewModel) architecture pattern to organize the code in a clear and efficient way, making it easier to maintain, scale, and test.
@@ -20,3 +22,4 @@ The project uses the MVVM (Model-View-ViewModel) architecture pattern to organiz
 - **Hilt** for dependency injection, making it easier to manage dependencies throughout the app.
 - **Mockito** for unit testing and mocking dependencies in test cases.
 - **JUnit** for unit testing the app’s functionality.
+- **Paging** to efficiently load and display large sets of data.
