@@ -1,4 +1,4 @@
-package com.example.listify.data
+package com.example.listify.data.model
 
 import kotlinx.serialization.Serializable
 
@@ -32,7 +32,7 @@ data class UserLocation(
     val city: String,
     val state: String,
     val country: String,
-    val postcode: Int,
+    val postcode: String,
     val coordinates: Coordinates,
     val timezone: Timezone,
 ) {

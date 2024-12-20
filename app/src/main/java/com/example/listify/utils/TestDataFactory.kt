@@ -1,13 +1,13 @@
 package com.example.listify.utils
 
-import com.example.listify.data.Coordinates
-import com.example.listify.data.Street
-import com.example.listify.data.Timezone
-import com.example.listify.data.User
-import com.example.listify.data.UserDOB
-import com.example.listify.data.UserLocation
-import com.example.listify.data.UserName
-import com.example.listify.data.UserPicture
+import com.example.listify.data.model.Coordinates
+import com.example.listify.data.model.Street
+import com.example.listify.data.model.Timezone
+import com.example.listify.data.model.User
+import com.example.listify.data.model.UserDOB
+import com.example.listify.data.model.UserLocation
+import com.example.listify.data.model.UserName
+import com.example.listify.data.model.UserPicture
 
 object TestDataFactory {
 
@@ -25,7 +25,7 @@ object TestDataFactory {
             city = "Taupo",
             state = "Wellington",
             country = "New Zealand",
-            postcode = 38193,
+            postcode = "38193",
             coordinates = Coordinates(
                 latitude = "53.3370",
                 longitude = "-21.0851"

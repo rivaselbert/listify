@@ -34,7 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.example.listify.R
-import com.example.listify.data.User
+import com.example.listify.data.model.User
 import com.example.listify.extension.toDisplayDate
 import com.example.listify.ui.components.textfield.LabeledTextField
 import com.example.listify.ui.theme.ListifyTheme
