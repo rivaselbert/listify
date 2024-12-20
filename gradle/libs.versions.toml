@@ -19,6 +19,7 @@ timber = "5.0.1"
 androidxHiltNavigationCompose = "1.2.0"
 mockitoKotlin = "5.3.1"
 junitJunit = "4.12"
+pagingRuntimeKtx = "1.0.0-alpha18"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -47,6 +48,7 @@ timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
 mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
 junit-junit = { group = "junit", name = "junit", version.ref = "junitJunit" }
+androidx-paging-compose = { module = "androidx.paging:paging-compose", version.ref = "pagingRuntimeKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

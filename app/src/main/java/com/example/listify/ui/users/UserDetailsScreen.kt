@@ -2,6 +2,7 @@ package com.example.listify.ui.users
 
 import android.content.res.Configuration
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -22,6 +23,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -36,6 +41,7 @@ import coil.compose.AsyncImage
 import com.example.listify.R
 import com.example.listify.data.model.User
 import com.example.listify.extension.toDisplayDate
+import com.example.listify.ui.components.FullImageViewer
 import com.example.listify.ui.components.textfield.LabeledTextField
 import com.example.listify.ui.theme.ListifyTheme
 import com.example.listify.utils.TestDataFactory
@@ -58,6 +64,8 @@ private fun UserDetailsScreenContent(
 ) {
     val scrollState = rememberScrollState()
 
+    var showFullImageViewer by remember { mutableStateOf(false) }
+
     Scaffold(
         topBar = {
             UserDetailsScreenTopBar(
@@ -79,8 +87,11 @@ private fun UserDetailsScreenContent(
                     .size(130.dp)
                     .border(4.dp, MaterialTheme.colorScheme.surfaceContainerHighest, CircleShape)
                     .clip(CircleShape)
-                    .align(Alignment.CenterHorizontally),
-                model = user.picture.medium,
+                    .align(Alignment.CenterHorizontally)
+                    .clickable {
+                        showFullImageViewer = true
+                    },
+                model = user.picture.large,
                 placeholder = painterResource(R.drawable.empty_user_placeholder),
                 error = painterResource(R.drawable.empty_user_placeholder),
                 contentDescription = "User thumbnail",
@@ -112,6 +123,13 @@ private fun UserDetailsScreenContent(
                 value = user.location.fullAddress,
             )
         }
+    }
+
+    if (showFullImageViewer) {
+        FullImageViewer(
+            imageUrl = user.picture.large,
+            onDismiss = { showFullImageViewer = false }
+        )
     }
 }
 

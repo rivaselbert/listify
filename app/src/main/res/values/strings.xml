@@ -8,4 +8,5 @@
     <string name="address">Address</string>
     <string name="age">Age</string>
     <string name="dismiss">Dismiss</string>
+    <string name="paginate">Paginate</string>
 </resources>
